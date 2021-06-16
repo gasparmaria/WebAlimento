@@ -1,0 +1,60 @@
+﻿@model WebAlimento.Models.Alimento
+
+@{
+    ViewBag.Title = "Resultado";
+}
+
+<h2>Dados do alimento</h2>
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Dados do Alimento</legend>
+        <div class="editor-label">
+            <b>@Html.DisplayNameFor(model => model.Codigo)</b>
+        </div>
+        <div class="editor-field">
+            @Html.DisplayFor(model => model.Codigo)
+        </div>
+
+        <div class="editor-label">
+            <b>@Html.DisplayNameFor(model => model.Nome)</b>
+        </div>
+        <div class="editor-field">
+            @Html.DisplayFor(model => model.Nome)
+        </div>
+
+        <div class="editor-label">
+            <b>@Html.DisplayNameFor(model => model.Descricao)</b>
+        </div>
+        <div class="editor-field">
+            @Html.DisplayFor(model => model.Descricao)
+        </div>
+
+        <div class="editor-label">
+            <b>@Html.DisplayNameFor(model => model.Peso)</b>
+        </div>
+        <div class="editor-field">
+            @Html.DisplayFor(model => model.Peso)
+        </div>
+
+        <div class="editor-label">
+            <b>@Html.DisplayNameFor(model => model.Categoria)</b>
+        </div>
+        <div class="editor-field">
+            @Html.DisplayFor(model => model.Categoria)
+        </div>
+
+        <div class="editor-label">
+            <b>@Html.DisplayNameFor(model => model.ValorUnit)</b>
+        </div>
+        <div class="editor-field">
+            @Html.DisplayFor(model => model.ValorUnit)
+        </div>
+        <p>@Html.ActionLink("Voltar", "Index")</p>
+    </fieldset>
+    @section Scripts{
+        @Scripts.Render("~/bundles/jqueryval");
+    }
+}
